@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+/*General styles*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  font-family: 'Open Sans', sans-serif;
+  color: #ff7315;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.container h1 {
+  flex-basis: 100%;
+  text-shadow: 2px 2px 5px #232020;
+}
+
+.container div {
+  flex-basis: 40%;
+  padding: 0;
+  margin: 5px;
+}
+
+.sub-container {
+  min-height: 450px;
+  max-height: 600px;
+  margin: 20px;
+}
+
+button {
+  margin: 20px;
+  border: none;
+  border-radius: 5px;
+  min-width: 150px;
+  min-height: 50px;
+  background-color: #3a3535;
+  color: #ff7315;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  background-color: #ff7315;
+  cursor: pointer;
+  color: #3a3535;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+button:focus {
+  outline: none;
+}
+
+footer {
+  min-height: 200px;
+  background-color: #3a3535;
+  color: #ff7315;
+}
+
+footer a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #f4f4f4;
+}
+
+footer a:hover {
+  cursor: pointer;
+  color: #ff7315;
+}
+
+/* ======================================================== */
+/*Cat & Dog app styles*/
+
+.sub-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sub-container img {
+  max-width: 300px;
+  max-height: 300px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+/* ======================================================== */
+/* Random user app */
+.user-profile {
+  max-width: 305px;
+  background-color: white;
+  border-radius: 5px;
+  border: 2px solid #ff7315;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.user-profile .imgBox {
+  margin: 0;
+  padding: 0;
+}
+
+.user-profile img {
+  min-width: 300px;
+  min-height: 300px;
+  border: none;
+  border-bottom: 3px solid #ff7315;
+}
+
+.sub-container:nth-child(4) div {
+  color: #232020;
+  font-weight: bold;
+}
+
+.sub-container:nth-child(4) div span {
+  color: #3a3535;
+  font-weight: 400;
+}
+
+/* ======================================================== */
+/*Bitcoin App*/
+
+.sub-container:nth-child(5) {
+  align-self: flex-start;
+  padding-bottom: 305px;
+}
+
+ul {
+  padding: 25px;
+  list-style: none;
+}
+
+ul li span {
+  color: #232020;
+}
+
+/* ======================================================== */
+/*Media*/
+
+@media all and (max-width:700px) {
+  .container {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .sub-container:nth-child(5) {
+    align-self: center;
+    padding-bottom: 10px;
+  }
+}

@@ -5,7 +5,7 @@ $('#btnCat').click(() => {
   })
 })
 
-$.getJSON('https://aws.random.cat/meow', data => {
+$.get('https://aws.random.cat/meow').done( data => {
   $('#imgCat').attr('src', data.file)
 })
 

@@ -1,13 +1,28 @@
 /*Cat app*/
-$('#btnCat').click(() => {
-  $.getJSON('https://aws.random.cat/meow', data => {
-    $('#imgCat').attr('src', data.file)
-  })
-})
+var settings = {
+  'cache': false,
+  'dataType': "jsonp",
+  "async": true,
+  "crossDomain": true,
+  "url": "https://aws.random.cat/meow",
+  "method": "GET",
+  "headers": {
+      "accept": "application/json",
+      "Access-Control-Allow-Origin":"*"
+  }
+}
 
-$.get('https://aws.random.cat/meow').done( data => {
+$('#btnCat').click(() => {
+  $.ajax(settings).done( data => {
   $('#imgCat').attr('src', data.file)
-})
+  });
+});
+
+/*Request*/
+$.ajax(settings).done( data => {
+  $('#imgCat').attr('src', data.file)
+
+});
 
 /* ======================================================== */
 /*Dog app*/
